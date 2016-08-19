@@ -45,6 +45,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 :set mouse=a
 let g:NERDTreeMouseMode=3 
 
+
+" Disable auto commenting
+"autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 " Tabs and Spaces
 set tabstop=4
 set softtabstop=4
