@@ -15,6 +15,9 @@ Plugin 'raimondi/delimitmate'
 Plugin 'ervandew/supertab'
 Plugin 'majutsushi/tagbar'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'bling/vim-airline'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-airline/vim-airline-themes'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -45,9 +48,14 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 :set mouse=a
 let g:NERDTreeMouseMode=3 
 
+" Plugin: VIM Airline
+set laststatus=2
+
+" Plugin: Vim Airline Theme
+let g:airline_theme='solarized'
 
 " Disable auto commenting
-"autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Tabs and Spaces
 set tabstop=4
@@ -67,7 +75,6 @@ set hlsearch
 " Color Scheme Specifc
 syntax on
 set background=dark
-let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 let g:solarized_termcolors=256
 colorscheme solarized
