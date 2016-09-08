@@ -11,3 +11,6 @@ man() {
             man "$@"
 }
 
+# Aliases
+alias ls="ls -lhaG"
+
