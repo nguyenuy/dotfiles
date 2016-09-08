@@ -76,5 +76,6 @@ set hlsearch
 syntax on
 set background=dark
 let g:solarized_visibility="high"
+" NOTE: DO NOT NEED THE FOLLOWING LINE IF TERM IS NOT CONFIGURED FOR 256 COLORS
 let g:solarized_termcolors=256
 colorscheme solarized
