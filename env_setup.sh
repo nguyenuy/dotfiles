@@ -7,3 +7,7 @@ npm install -g yo        #yeoman generator
 # Vim Specific
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
+
+# TMux Specific
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
