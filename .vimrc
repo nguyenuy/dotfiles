@@ -47,6 +47,7 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 :set mouse=a
 let g:NERDTreeMouseMode=3 
+let NERDTreeQuitOnOpen = 1
 
 " Plugin: VIM Airline
 set laststatus=2
@@ -72,6 +73,13 @@ set showmatch
 
 set incsearch
 set hlsearch
+
+set autoread                 "Reload files changed outside of vim
+
+" ================ Turn Off Swap Files ==============
+set noswapfile
+set nobackup
+set nowb
 
 " Color Scheme Specifc
 syntax on
