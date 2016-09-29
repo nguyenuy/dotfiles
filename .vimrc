@@ -58,9 +58,10 @@ let g:airline_theme='solarized'
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Tabs and Spaces
-set tabstop=4
-set softtabstop=4
+set tabstop=2
+set softtabstop=2
 set expandtab
+set shiftwidth=2
 
 " UI
 set number
