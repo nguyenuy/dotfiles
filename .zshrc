@@ -1,3 +1,5 @@
+export HISTCONTROL=ignoreboth:erasedups
+
 # Man page color highlighting
 man() {
     env \
