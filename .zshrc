@@ -1,5 +1,11 @@
 export HISTCONTROL=ignoreboth:erasedups
 
+###
+### ZSH Configuration
+###
+### These are settings to add to the .zshrc file when things are done
+setopt append_history hist_ignore_all_dups hist_reduce_blanks
+
 # Man page color highlighting
 man() {
     env \
