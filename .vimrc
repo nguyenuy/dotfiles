@@ -19,6 +19,11 @@ Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline-themes'
 
+" These plugins require additional setup manually
+Plugin 'vim-syntastic/syntastic'
+Plugin 'valloric/youcompleteme'
+
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 Bundle 'altercation/vim-colors-solarized'
@@ -41,6 +46,13 @@ filetype plugin indent on    " required
 " Plugin: CtrlP Settings
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+
 
 " Plugin: NerdTree Settings
 map <C-n> :NERDTreeToggle<CR>
@@ -55,6 +67,27 @@ set laststatus=2
 " Plugin: Vim Airline Theme
 let g:airline_theme='solarized'
 
+" Plugin: YouCompleMe Settings
+let g:ycm_autoclose_preview_window_after_completion=1
+
+" Plugin: Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Leader Remapping
+map <leader>n :NERDTreeToggle<CR>
+map <leader>t :TagbarToggle<CR>
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" ====================
+" General VIM Settings
+" ====================
 " Disable auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
@@ -89,6 +122,10 @@ let g:solarized_visibility="high"
 let g:solarized_termcolors=256
 colorscheme solarized
 
+" Enable default backspace behavior 
+set bs=2
 
 " Clipboard setup for Mac
 set clipboard=unnamed
+
+
