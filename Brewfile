@@ -8,6 +8,7 @@ cask "java8"
 brew "apache-spark"
 brew "apache-zeppelin"
 brew "awscli", link: false
+brew "bat"
 brew "cmake"
 brew "coreutils"
 brew "fzf"

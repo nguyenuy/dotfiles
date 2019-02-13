@@ -1,10 +1,16 @@
+### History Control Settings
 export HISTCONTROL=ignoreboth:erasedups
+setopt append_history hist_ignore_all_dups hist_reduce_blanks
+
+### Fuzzy Finder Settings
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+# add support for ctrl+o to open selected file in VSCode, enter in VIM
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort' --bind='enter:execute(vim {})+abort'"
 
 ###
 ### ZSH Configuration
 ###
 ### These are settings to add to the .zshrc file when things are done
-setopt append_history hist_ignore_all_dups hist_reduce_blanks
 
 # Man page color highlighting
 man() {
