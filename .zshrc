@@ -25,6 +25,8 @@ man() {
             man "$@"
 }
 
-# Aliases
+# All Other Aliases
 alias ls="ls -lhaG"
+alias scala="scala -Dscala.color"
+alias cat="bat"
 
