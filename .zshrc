@@ -26,7 +26,7 @@ man() {
 }
 
 # All Other Aliases
-alias ls="ls -lhaG"
+alias ls="/usr/local/bin/gls --color -hlaGN --group-directories-first"
 alias scala="scala -Dscala.color"
 alias cat="bat"
 
