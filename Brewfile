@@ -5,7 +5,6 @@ tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 cask "java"
-brew "apache-zeppelin"
 brew "awscli", link: false
 brew "bat"
 brew "cmake"
