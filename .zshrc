@@ -5,7 +5,7 @@ setopt append_history hist_ignore_all_dups hist_reduce_blanks
 ### Fuzzy Finder Settings
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 # add support for ctrl+o to open selected file in VSCode, enter in VIM
-export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort' --bind='enter:execute(vim {})+abort'"
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(vim {})+abort'"
 
 ###
 ### ZSH Configuration
@@ -28,5 +28,4 @@ man() {
 # All Other Aliases
 alias ls="/usr/local/bin/gls --color -hlaGN --group-directories-first"
 alias scala="scala -Dscala.color"
-alias cat="bat"
 
